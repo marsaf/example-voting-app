@@ -1,0 +1,14 @@
+# default ingress port
+servicePort: 80
+
+# ingress
+ingressEnabled: true
+
+# configure redis
+redis:
+  usePassword: false
+  redisPassword: ""
+
+# postgresql
+postgresql:
+  postgresPassword: "demo"

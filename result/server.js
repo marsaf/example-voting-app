@@ -24,7 +24,9 @@ io.sockets.on('connection', function (socket) {
 async.retry(
   {times: 1000, interval: 1000},
   function(callback) {
-    pg.connect('postgres://postgres@db/postgres', function(err, client, done) {
+    postgresHost = process.env.POSTGRES_HOST
+    postgresPassword = process.env.POSTGRES_PASSWORD
+    pg.connect('postgres://postgres:' + postgresPassword + '@' + postgresHost + '/postgres', function(err, client, done) {
       if (err) {
         console.error("Waiting for db");
       }

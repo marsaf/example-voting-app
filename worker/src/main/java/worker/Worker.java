@@ -4,12 +4,16 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 import java.sql.*;
 import org.json.JSONObject;
+import java.util.Properties;
 
 class Worker {
   public static void main(String[] args) {
     try {
-      Jedis redis = connectToRedis("redis");
-      Connection dbConn = connectToDB("db");
+      String redisHost = System.getenv("REDIS_HOST");
+      Jedis redis = connectToRedis(redisHost);
+      String postgresHost = System.getenv("POSTGRES_HOST");
+      String postgresPassword = System.getenv("POSTGRES_PASSWORD");
+      Connection dbConn = connectToDB(postgresHost, postgresPassword);
 
       System.err.println("Watching vote queue");
 
@@ -62,17 +66,20 @@ class Worker {
     return conn;
   }
 
-  static Connection connectToDB(String host) throws SQLException {
+  static Connection connectToDB(String host, String password) throws SQLException {
     Connection conn = null;
 
     try {
 
       Class.forName("org.postgresql.Driver");
+      Properties props = new Properties();
+      props.setProperty("user","postgres");
+      props.setProperty("password",password);
       String url = "jdbc:postgresql://" + host + "/postgres";
 
       while (conn == null) {
         try {
-          conn = DriverManager.getConnection(url, "postgres", "");
+          conn = DriverManager.getConnection(url, props);
         } catch (SQLException e) {
           System.err.println("Waiting for db");
           sleep(1000);

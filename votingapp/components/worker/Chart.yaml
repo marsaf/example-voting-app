@@ -1,0 +1,10 @@
+apiVersion: v1
+description: A Helm chart for Worker component
+name: worker
+version: 0.1.0
+keywords:
+- demo
+- kubernetes
+- helm
+- voting-app
+- worker

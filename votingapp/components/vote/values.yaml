@@ -1,0 +1,27 @@
+# Specify a imagePullPolicy
+## 'Always' if imageTag is 'latest', else set to 'IfNotPresent'
+## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+##
+# imagePullPolicy: IfNotPresent
+
+# number of replicas
+# by default 1
+replicaCount: 2
+
+# image name
+image: alexeiled/vote
+
+# image tag  
+imageTag: latest
+
+# service type
+serviceType: NodePort
+
+# external vote app port
+externalPort: 5000
+
+# internal vote app port
+internalPort: 80
+
+# redis service name
+redisService: redis

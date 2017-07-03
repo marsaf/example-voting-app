@@ -1,0 +1,22 @@
+# Specify a imagePullPolicy
+## 'Always' if imageTag is 'latest', else set to 'IfNotPresent'
+## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+##
+# imagePullPolicy: IfNotPresent
+
+# number of replicas
+# by default 1
+replicaCount: 1
+
+# image name
+image: alexeiled/worker
+
+# image tag  
+imageTag: latest
+
+# redis service name
+redisService: redis
+
+# posgres service name
+postgresService: postgresql
+postgresPassword: demo

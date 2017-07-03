@@ -1,0 +1,17 @@
+dependencies:
+- name: postgresql
+  version: 0.7.1
+  repository: https://kubernetes-charts.storage.googleapis.com/
+- name: redis
+  version: 0.8.0
+  repository: https://kubernetes-charts.storage.googleapis.com/
+# temporary workaround till 2.5.1
+- name: vote
+  version: 0.1.0
+  repository: file://components/vote
+- name: result
+  version: 0.1.0
+  repository: file://components/result
+- name: worker
+  version: 0.1.0
+  repository: file://components/worker

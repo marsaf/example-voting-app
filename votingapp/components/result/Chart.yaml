@@ -1,0 +1,10 @@
+apiVersion: v1
+description: A Helm chart for Result component
+name: result
+version: 0.1.0
+keywords:
+- demo
+- kubernetes
+- helm
+- voting-app
+- result

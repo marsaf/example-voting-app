@@ -1,0 +1,43 @@
+dependencies:
+- alias: ""
+  condition: ""
+  enabled: false
+  import-values: null
+  name: postgresql
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  tags: null
+  version: 0.7.1
+- alias: ""
+  condition: ""
+  enabled: false
+  import-values: null
+  name: redis
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  tags: null
+  version: 0.8.0
+- alias: ""
+  condition: ""
+  enabled: false
+  import-values: null
+  name: vote
+  repository: file://components/vote
+  tags: null
+  version: 0.1.0
+- alias: ""
+  condition: ""
+  enabled: false
+  import-values: null
+  name: result
+  repository: file://components/result
+  tags: null
+  version: 0.1.0
+- alias: ""
+  condition: ""
+  enabled: false
+  import-values: null
+  name: worker
+  repository: file://components/worker
+  tags: null
+  version: 0.1.0
+digest: sha256:cafec9c0e33fdd1065aba3a39c10f133b11db2a5040cfea33628685d9d3c2401
+generated: 2017-07-03T14:06:28.328985768+03:00

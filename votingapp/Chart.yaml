@@ -1,0 +1,16 @@
+apiVersion: v1
+description: A Helm chart for Docker Voting App
+name: votingapp
+version: 0.2.0
+keywords:
+- demo
+- kubernetes
+- helm
+- voting-app
+home: https://codefresh.io/
+icon: http://icons.iconseeker.com/png/256/superbuuf/catdog.png
+sources:
+- https://github.com/alexei-led/example-voting-app
+maintainers:
+- name: Alexei Ledenev
+  email: alexei.led@gmail.com

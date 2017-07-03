@@ -1,0 +1,10 @@
+apiVersion: v1
+description: A Helm chart for Vote component
+name: vote
+version: 0.1.0
+keywords:
+- demo
+- kubernetes
+- helm
+- voting-app
+- vote
