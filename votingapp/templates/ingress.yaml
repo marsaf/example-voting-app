@@ -13,14 +13,14 @@ metadata:
     heritage: {{ .Release.Service  | quote }}
 spec:
   rules:
-  - host: vote.demo.dev
+  - host: vote.minikube
     http:
       paths:
       - path: /
         backend:
           serviceName: {{ .Release.Name }}-vote
           servicePort: {{ .Values.servicePort }}
-  - host: result.demo.dev
+  - host: result.minikube
     http:
       paths:
       - path: /

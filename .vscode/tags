@@ -6,18 +6,19 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Flask	../vote/app.py	/^from flask import Flask, render_template, request, make_response, g$/;"	kind:namespace	line:1
 Redis	../vote/app.py	/^from redis import Redis$/;"	kind:namespace	line:2
-app	../vote/app.py	/^app = Flask(__name__)$/;"	kind:variable	line:12
+app	../vote/app.py	/^app = Flask(__name__)$/;"	kind:variable	line:13
 app.py	../vote/app.py	1;"	kind:file	line:1
 g	../vote/app.py	/^from flask import Flask, render_template, request, make_response, g$/;"	kind:namespace	line:1
-get_redis	../vote/app.py	/^def get_redis():$/;"	kind:function	line:14
-hello	../vote/app.py	/^def hello():$/;"	kind:function	line:20
-hostname	../vote/app.py	/^hostname = socket.gethostname()$/;"	kind:variable	line:10
+get_redis	../vote/app.py	/^def get_redis():$/;"	kind:function	line:15
+hello	../vote/app.py	/^def hello():$/;"	kind:function	line:21
+hostname	../vote/app.py	/^hostname = socket.gethostname()$/;"	kind:variable	line:11
 json	../vote/app.py	/^import json$/;"	kind:namespace	line:6
 make_response	../vote/app.py	/^from flask import Flask, render_template, request, make_response, g$/;"	kind:namespace	line:1
 option_a	../vote/app.py	/^option_a = os.getenv('OPTION_A', "Cats")$/;"	kind:variable	line:8
 option_b	../vote/app.py	/^option_b = os.getenv('OPTION_B', "Dogs")$/;"	kind:variable	line:9
 os	../vote/app.py	/^import os$/;"	kind:namespace	line:3
 random	../vote/app.py	/^import random$/;"	kind:namespace	line:5
+redisHost	../vote/app.py	/^redisHost = os.getenv('REDIS_HOST', "redis")$/;"	kind:variable	line:10
 render_template	../vote/app.py	/^from flask import Flask, render_template, request, make_response, g$/;"	kind:namespace	line:1
 request	../vote/app.py	/^from flask import Flask, render_template, request, make_response, g$/;"	kind:namespace	line:1
 socket	../vote/app.py	/^import socket$/;"	kind:namespace	line:4
