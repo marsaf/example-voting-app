@@ -25,3 +25,7 @@ internalPort: 80
 
 # redis service name
 redisService: redis
+
+# options: A == Cats, B == Dogs by default
+# optionA: Cats
+# optionB: Dogs

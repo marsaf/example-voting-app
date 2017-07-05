@@ -22,5 +22,9 @@ spec:
           env:
             - name: REDIS_HOST
               value: "{{ .Release.Name }}-{{ .Values.redisService}}"
+            - name: OPTION_A
+              value: {{ default "Cats" .Values.optionA | quote }}
+            - name: OPTION_B
+              value: {{ default "Dogs" .Values.optionB | quote }}
           ports:
             - containerPort: {{ .Values.internalPort }}
