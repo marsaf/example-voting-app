@@ -27,5 +27,5 @@ internalPort: 80
 redisService: redis
 
 # options: A == Cats, B == Dogs by default
-# optionA: Cats
-# optionB: Dogs
+optionA: Java
+optionB: Go
