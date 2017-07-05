@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ .Release.Name }}-credentials-test"
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+  - name: {{ .Release.Name }}-credentials-test
+    image: "{{ .Values.postgresql.image }}:{{ .Values.postgresql.imageTag }}"
+    env:
+      - name: POSTGRES_HOST
+        value: "{{ .Release.Name }}-postgresql"
+      - name: PGPASSWORD
+        value: {{ .Values.postgresql.postgresPassword | quote }}
+    command: ["sh", "-c", "env; psql --host=$POSTGRES_HOST --port=5432 --username=postgres -l"]
+  restartPolicy: Never
