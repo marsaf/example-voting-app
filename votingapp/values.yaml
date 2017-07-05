@@ -12,3 +12,6 @@ redis:
 # postgresql
 postgresql:
   postgresPassword: "demo"
+
+result:
+  imageTag: javago

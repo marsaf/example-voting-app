@@ -29,6 +29,3 @@ redisService: redis
 # options: A == Cats, B == Dogs by default
 optionA: Java
 optionB: Go
-
-result:
-  imageTag: javago
